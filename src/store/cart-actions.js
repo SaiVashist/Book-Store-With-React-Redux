@@ -4,7 +4,7 @@ export const fetchCartData = () => {
   return async dispatch => {
     const fetchData = async () => {
       const response = await fetch(
-        'https://my-project-4a83e-default-rtdb.firebaseio.com/cart.json'
+       'url.json'
       )
       if (!response.ok) {
         throw new Error('Could not fetch cart data')
@@ -43,7 +43,7 @@ export const sendCartData = cart => {
     )
     const sendRequest = async () => {
       const response = await fetch(
-        'https://my-project-4a83e-default-rtdb.firebaseio.com/cart.json',
+        'url.json',
         {
           method: 'PUT',
           body: JSON.stringify({
